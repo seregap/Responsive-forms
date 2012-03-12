@@ -1,0 +1,221 @@
+* {
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	}
+.container {
+	width:550px;
+	padding:5em;
+	font-size:14px;
+	margin:0 auto;
+	font-family:Arial, Helvetica, sans-serif;
+	}
+/* button */
+.l_reset {
+	margin:0;
+	padding:0;
+	list-style:none;
+	}
+.b-button {
+	border:0;
+	font-size:13px;
+	padding:5px 10px 6px;
+	background:#333;
+	color:#fff;
+	cursor:pointer;
+	line-height:normal;
+	display:inline-block;
+	text-decoration:none;
+	vertical-align:middle;
+	margin:0 5px 0 0;
+	overflow:visible;
+	}
+	.b-button:hover {
+		color:#333;
+		background:#ccc;
+		}	
+/* label */
+	.b-label {
+		vertical-align:middle;
+		line-height:normal;
+		display:inline-block;
+		padding:.371em 0;
+		width:100%;
+		margin:0;
+		}
+/* textbox */
+	.b-text,
+	.b-select {
+		display:inline-block;
+		width:100%;
+		border:1px solid #bebebe;
+		font-size:14px;
+		padding:0.4em;
+		vertical-align:top;
+		-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;;
+		   -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;;
+		        box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;;
+		-webkit-border-radius:3px;
+		   -moz-border-radius:3px;
+				border-radius:3px;
+		}
+/* helper */
+
+.helper_text {
+	font-size:0.857em;
+	color:#999;
+	display:block;
+	padding:0.5em 0 0;
+	}
+
+/* checkbox */
+.b-form,
+.b-checkbox {
+	padding:0 0 1.5em;
+	width:100%;
+	display:inline-block;
+	vertical-align:top;
+	}
+.b-form li {
+	padding:0;
+	margin:0 0 1em;
+	height:1%;
+	position:relative;
+	}
+.b-form_aligned .b-label {
+	width:150px;
+	margin:0 0 0 -150px;
+	}
+.b-checkbox input {		
+	vertical-align:-1px;
+    margin:0 -0.5em 0 -17px;
+    display:inline-block;
+	}
+.b-checkbox .b-label {
+	vertical-align:text-top;
+		margin:0;
+		padding:0 0 0 0.7em;
+	width:auto;
+	}
+.b-checkbox li {
+	margin:0 0 0.7em 17px;
+	padding-left:0;
+	}
+.b-checkbox_h li {
+	display:inline-block;
+	padding-right:1em;
+	white-space:nowrap;
+	}
+@media screen and (-webkit-min-device-pixel-ratio:0)  {
+	.b-checkbox li {
+		margin:0 0 0.7em 25px;
+		}
+    input[type=radio],
+    input[type=checkbox] {
+    	margin:0 -0.5em 0 -25px;
+    	-webkit-appearance: none;
+    	border:1px solid #4c4c4c;	    	
+		background:#fefefe;
+		background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#dbdbdb));
+		background-image:-webkit-linear-gradient(top, #fefefe 0%, #dbdbdb 100%);
+		background-image:linear-gradient(top, #fefefe 0, #dbdbdb 100%);
+    	}
+	input[type=radio] {
+		vertical-align:-5px;
+    	width:21px;
+    	height:21px;
+    	-webkit-border-radius:10px;
+    	   -moz-border-radius:10px;
+    			border-radius:10px;
+    	}
+    input[type=radio]:checked {
+		background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#323232), color-stop(100%,#8a8a8a));
+		background-image:-webkit-linear-gradient(top, #323232 0%, #8a8a8a 100%);
+		background-image:linear-gradient(top, #323232 0, #8a8a8a 100%);
+    	}
+    input[type=radio]:checked:before {
+    	content:"";
+    	width:9px;
+    	height:9px;
+		margin:5px 0 0 5px;
+    	-webkit-border-radius:4px;
+    	   -moz-border-radius:4px;
+    			border-radius:4px;
+		position:absolute;
+    	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6f6f6), color-stop(100%,#d1d1d1));
+    	background-image:-webkit-linear-gradient(top, #f6f6f6 0%, #d1d1d1 100%);
+    	background-image:linear-gradient(top, #f6f6f6 0, #d1d1d1 100%);
+    	   -moz-box-shadow:0 1px 0 rgba(0,0,0,1);
+    	-webkit-box-shadow:0 1px 0 rgba(0,0,0,1);
+    			box-shadow:0 1px 0 rgba(0,0,0,1);
+    	}	
+	input[type=checkbox] {
+    	vertical-align:-3px;
+		width:16px;
+		height:16px;
+		-webkit-border-radius:5px;
+		   -moz-border-radius:5px;
+				border-radius:5px;
+		}
+   	input[type=checkbox]:checked {
+   		border:0;
+		background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAf1JREFUeNqMUznLWlEQPb7nUiikUQmmUVBBMCCKQW2S0kI7GwvFXqtUSR/4UsXK3tI/YKOkSKuohaCFCK4gamHABRQ1M5PPR8KnIQPn3rfcc+bOps/lcni294SPhBDhDe7bnNAifCP84A86Xkjk03a7fVqtVqAdp9PpLttgMMBiscBms/H+uVwuf9URmT1/7/f76vF4xP+Y0WiEz+c70+MHhZYv0+lUPZ/PUFX1IRRFwXq9lp3PzmYzlbks8PZwOECv1z8ECyyXSySTSQyHQ1yvV+z3e75MgAVeseq/BBaLhZBLpRI6nY6IMIe5el750CMbj8fweDwoFovgHKVSKTidTo2j3ARYcTKZgPKheeZq7HY7VKtVSVwmk8Fms4HVav1bgGPkq8XjcbhcLvHKcbbbbXS7XSHn83k0m014vV4pJ0OcS3fM50in0xIjXzORSKDVaqHX68Fut2M0GqFSqSAWi91i10ze3G43arWaeGFv/MwCHCtn3+/3IxqNyr8/k3sT+GkymRAIBFCv10WEjcm324TDYZjN5hfVIduyQJfjYfVQKCQihUJBRLLZLLhHHA7HCzKf57nQWvlyuXBngXY0Gg0Eg0FJYiQSuVteyoW0sjZMtD3pdDrtwGAwkPrfM64Q2e9hun18vgmP8zvC6wd9tSA0eJyJLOP8S4ABABjXznkihfvlAAAAAElFTkSuQmCC);  
+     	}
+	.b-select {
+		line-height:normal;
+		color:#666;
+		font-weight:bold;
+		font-size:18px;
+		padding:12px 4px 12px 10px;
+		-webkit-appearance: none;
+		border:0;
+		background:none;
+		position:relative;
+		cursor:pointer;
+		z-index:10;
+		}
+	.b-select-wrap {
+		width:100%;			
+		display:inline-block;
+		position:relative;
+		background-image:-moz-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+		background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#f0f0f0));
+		background-image:-webkit-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+		background-image:-o-linear-gradient(top, #fff 0, #f0f0f0 100%);
+		background-image:-ms-linear-gradient(top, #fff 0%, #f0f0f0 100%);
+		background-image:linear-gradient(top, #fff 0, #f0f0f0 100%);
+		   -moz-box-shadow:0 0 4px rgba(0,0,0,0.5);
+		-webkit-box-shadow:0 0 4px rgba(0,0,0,0.5);
+				box-shadow:0 0 4px rgba(0,0,0,0.5);
+		-webkit-border-radius:5px;
+		   -moz-border-radius:5px;
+				border-radius:5px;
+		} 
+	.b-select-wrap:before,
+	.b-select-wrap:after {
+		z-index:9;
+	 	content:"";
+	 	position:absolute;
+	 	top:50%;	
+	 	left:100%;		
+		}
+	.b-select-wrap:before {
+	 	width:1px;
+	 	height:40px;		 	
+	 	margin:-20px 0 0 -47px;
+	 	background:#d8d8d8;
+	 	border-left:1px solid #efefef;
+	 	border-right:1px solid #efefef;
+	 	}
+	 .b-select-wrap:after {		 	
+	 	width:22px;		 	
+	 	height:30px;
+	 	margin:-15px 0 0 -34px;
+		background:url(../i/select.png);
+	 	}
+	}
+@media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
+       .b-checkbox input {
+       	vertical-align:1px;
+       }
+ }
