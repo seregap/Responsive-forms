@@ -1,21 +1,19 @@
-* {
-	-webkit-box-sizing:border-box;
-	-moz-box-sizing:border-box;
-	box-sizing:border-box;
+html {
+	font-size:62.5%;
+	}
+body {
+	font:14px/1.4 Arial, Helvetica, sans-serif;
+	font-size:1.4rem;
 	}
 .container {
-	width:550px;
-	padding:5em;
-	font-size:14px;
+	width:650px;
+	padding:5em 0;
 	margin:0 auto;
-	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-size:1.4rem;
 	}
 /* button */
-.l_reset {
-	margin:0;
-	padding:0;
-	list-style:none;
-	}
+
 .b-button {
 	border:0;
 	font-size:13px;
@@ -29,55 +27,83 @@
 	vertical-align:middle;
 	margin:0 5px 0 0;
 	overflow:visible;
+	border-style:solid;
+	border-width:1px;
+	border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+	background:#0088CC;
+	background:-moz-linear-gradient(top, #0088CC, #0055CC);
+	background:-webkit-gradient(linear,left top,left bottom,color-stop(0, #0088CC),color-stop(1, #0055CC));
+	text-shadow:0 -1px 0 rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	   -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	        box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
 	}
 	.b-button:hover {
-		color:#333;
-		background:#ccc;
+		background:#0055CC;
+		background:-moz-linear-gradient(top, #0055CC, #0088CC);
+		background:-webkit-gradient(linear,left top,left bottom,color-stop(0, #0055CC),color-stop(1, #0088CC));
 		}	
 /* label */
 	.b-label {
 		vertical-align:middle;
-		line-height:normal;
 		display:inline-block;
-		padding:.371em 0;
+		padding:5px;
 		width:100%;
 		margin:0;
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+			    box-sizing:border-box;
 		}
 /* textbox */
 	.b-text,
 	.b-select {
 		display:inline-block;
-		width:100%;
+		width:300px;
 		border:1px solid #bebebe;
 		font-size:14px;
-		padding:0.4em;
+		padding:5px;
 		vertical-align:top;
-		-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;;
-		   -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;;
-		        box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;;
+		-webkit-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		   -moz-box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		        box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
 		-webkit-border-radius:3px;
 		   -moz-border-radius:3px;
 				border-radius:3px;
+		-webkit-box-sizing:border-box;
+		   -moz-box-sizing:border-box;
+			    box-sizing:border-box;
 		}
+
+.b-text:focus,
+.b-select:focus {
+	-webkit-box-shadow:0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+	   -moz-box-shadow:0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(82, 168, 236, 0.6);
+	        box-shadow:0 1px 3px rgba(0, 0, 0, 0.1) inset, 0 0 8px rgba(82, 168, 236, 0.6));
+	border-color: rgba(82, 168, 236, 0.8);
+	outline: 0 none;
+	}
+
 /* helper */
 
 .helper_text {
 	font-size:0.857em;
 	color:#999;
-	display:block;
 	padding:0.5em 0 0;
 	}
 
 /* checkbox */
 .b-form,
-.b-checkbox {
+.b-form_switch {
 	padding:0 0 1.5em;
 	width:100%;
 	display:inline-block;
 	vertical-align:top;
 	}
 .b-form li {
-	padding:0;
+	padding:0 0 0 150px;
 	margin:0 0 1em;
 	height:1%;
 	position:relative;
@@ -86,28 +112,29 @@
 	width:150px;
 	margin:0 0 0 -150px;
 	}
-.b-checkbox input {		
+.b-form_switch input {		
 	vertical-align:-1px;
     margin:0 -0.5em 0 -17px;
     display:inline-block;
 	}
-.b-checkbox .b-label {
+.b-form_switch .b-label {
 	vertical-align:text-top;
-		margin:0;
-		padding:0 0 0 0.7em;
+	margin:0;
+	line-height:normal;
+	padding:0 0 0 0.7em;
 	width:auto;
 	}
-.b-checkbox li {
+.b-form_switch li {
 	margin:0 0 0.7em 17px;
 	padding-left:0;
 	}
-.b-checkbox_h li {
+.b-form_switch_h li {
 	display:inline-block;
 	padding-right:1em;
 	white-space:nowrap;
 	}
 @media screen and (-webkit-min-device-pixel-ratio:0)  {
-	.b-checkbox li {
+	.b-form_switch li {
 		margin:0 0 0.7em 25px;
 		}
     input[type=radio],
@@ -215,7 +242,7 @@
 	 	}
 	}
 @media all and (-webkit-min-device-pixel-ratio:10000), not all and (-webkit-min-device-pixel-ratio:0) {
-       .b-checkbox input {
+       .b-form_switch input {
        	vertical-align:1px;
        }
  }

@@ -15,17 +15,17 @@
 			button.b-button {
 				height:27px;
 				}
-			.b-checkbox input,
-			.b-checkbox .b-label {
+			.b-form_switch input,
+			.b-form_switch .b-label {
 				display:inline;
 				zoom:1;
 				}
-			.b-checkbox input {
+			.b-form_switch input {
 				vertical-align:2px;
 	    		width:13px;
 	    		height:13px;			
 				}
-			.b-checkbox .b-label {
+			.b-form_switch .b-label {
 				padding:0;
 				vertical-align:top;
 				}
@@ -35,13 +35,14 @@
 </head>
 <body>
 <div class="container">
-<ol class="b-form b-form_aligned l_reset">
+<ol class="b-form b-form_aligned">
 	<li>
 		<label class="b-label" for="text1">Name</label><input id="text1" type="text" class="b-text" />
 	</li>
 	<li>
 		<label class="b-label" for="text2">Email</label><input id="text2" type="text" class="b-text" />
-		<span class="helper_text">In addition to freeform text, any HTML5 text-based input appears like so.</span>
+		<span class="helper_text">Help text inline</span>
+		<p class="helper_text">Help text below</p>
 	</li>
 	<li>
 		<label class="b-label" for="text3">Address very very veeerry looooooong label</label><input id="text3" type="text" class="b-text" />
@@ -60,7 +61,8 @@
 		<label class="b-label" for="text4">Message</label><textarea class="b-text b-text_area" cols="30" rows="10"></textarea>
 	</li>
 	<li>
-		<label class="b-label" for="">Тема</label><!----><ol class="b-checkbox l_reset">
+		<label class="b-label" for="">Тема</label>
+		<ol class="b-form b-form_switch">
 			<li>
 				<input type="checkbox" id="name1" name="checkbox1" />
 				<label class="b-label" for="name1">Name</label>	
@@ -74,7 +76,7 @@
 				<label class="b-label" for="gender1">Gender long long long long long long long long long long long long long ong long long long long long long long long long long long long long long looooong</label>
 			</li>
 		</ol>
-		<ol class="b-checkbox b-checkbox_h l_reset">
+		<ol class="b-form b-form_switch b-form_switch_h">
 			<li>
 				<input type="checkbox" id="name2" name="checkbox2" />
 				<label class="b-label" for="name2">Name</label>	
@@ -88,7 +90,7 @@
 				<label class="b-label" for="gender2">Gender</label>
 			</li>
 		</ol>
-		<ol class="b-checkbox l_reset">
+		<ol class="b-form b-form_switch">
 			<li>
 				<input type="radio" id="name3" name="radio1" />
 				<label class="b-label" for="name3">Name</label>	
@@ -102,7 +104,7 @@
 				<label class="b-label" for="gender3">Самый длинный вариант ответа в этом опроснике несомненно этот</label>
 			</li>
 		</ol>
-		<ol class="b-checkbox b-checkbox_h l_reset">
+		<ol class="b-form b-form_switch b-form_switch_h">
 			<li>
 				<input type="radio" id="name4" name="radio2" />
 				<label class="b-label" for="name4">Name</label>	
