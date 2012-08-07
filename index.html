@@ -2,32 +2,34 @@
 <html id="nojs" lang="en-GB">
 
 <head>
-	<title>Responsive forms 3.0</title>
+	<title>Responsive forms</title>
 	<meta charset="utf-8">
 	<link href="s/base.min.css" rel="stylesheet">
 	<link href="s/normalize.css" rel="stylesheet">
 	<link href="s/core.css" rel="stylesheet"> 
-	    
 	
+
+
 	<!--[if lte IE 7]>
 		<style>
-			input.b-button,
-			button.b-button {
+			input.button,
+			button.button {
+				border:0;
 				height:27px;
 				}
-			.b-form_switch input,
-			.b-form_switch .b-label {
+			.form_switch input,
+			.form_switch .label,
+			.form_switch_h .form__item {
 				display:inline;
 				zoom:1;
 				}
-			.b-form_switch input {
+			.form_switch input {
 				vertical-align:2px;
-	    		width:13px;
-	    		height:13px;			
+				width:13px;
+				height:13px;
 				}
-			.b-form_switch .b-label {
+			.form_switch .label {
 				padding:0;
-				vertical-align:top;
 				}
 		</style>
 	<![endif]-->
@@ -35,20 +37,26 @@
 </head>
 <body>
 <div class="container">
-<ol class="b-form b-form_aligned">
-	<li>
-		<label class="b-label" for="text1">Name</label><input id="text1" type="text" class="b-text" />
-	</li>
-	<li>
-		<label class="b-label" for="text2">Email</label><input id="text2" type="text" class="b-text" />
-		<span class="helper_text">Help text inline</span>
-		<p class="helper_text">Help text below</p>
-	</li>
-	<li>
-		<label class="b-label" for="text3">Address very very veeerry looooooong label</label><input id="text3" type="text" class="b-text" />
-	</li>
-	<li>
-		<label class="b-label" for="select">Select something</label><span class="b-select-wrap"><select id="select" class="b-select">
+<div class="form justify">
+	<div class="form__item">
+		<span class="error">Please enter your name</span>
+		<label class="label" for="text1">Name</label>
+		<input id="text1" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<span class="error">Please enter your email</span>
+		<label class="label" for="text2">Email</label>
+		<input id="text2" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<span class="error">Please enter your long long long long long address here</span>
+		<label class="label" for="text3">Address very very veeerry looooooong label</label>
+		<input id="text3" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<label class="label" for="select">Select something</label>
+		<span class="select-wrap">
+			<select id="select" class="select">
 				<option value="value">value</option>
 				<option value="value">value</option>
 				<option value="value">value</option>
@@ -56,73 +64,163 @@
 				<option value="value">value</option>	
 			</select>			
 		</span>
-	</li>
-	<li>
-		<label class="b-label" for="text4">Message</label><textarea class="b-text b-text_area" cols="30" rows="10"></textarea>
-	</li>
-	<li>
-		<label class="b-label" for="">Тема</label>
-		<ol class="b-form b-form_switch">
-			<li>
-				<input type="checkbox" id="name1" name="checkbox1" />
-				<label class="b-label" for="name1">Name</label>	
-			</li>
-			<li>
-				<input type="checkbox" id="email1" name="checkbox1" />
-				<label class="b-label" for="email1">Email long long long long long looooong</label>	
-			</li>
-			<li>
-				<input type="checkbox" id="gender1" name="checkbox1" />	
-				<label class="b-label" for="gender1">Gender long long long long long long long long long long long long long ong long long long long long long long long long long long long long long looooong</label>
-			</li>
-		</ol>
-		<ol class="b-form b-form_switch b-form_switch_h">
-			<li>
-				<input type="checkbox" id="name2" name="checkbox2" />
-				<label class="b-label" for="name2">Name</label>	
-			</li>
-			<li>
-				<input type="checkbox" id="email2" name="checkbox2" />
-				<label class="b-label" for="email2">Email</label>	
-			</li>
-			<li>
-				<input type="checkbox" id="gender2" name="checkbox2" />	
-				<label class="b-label" for="gender2">Gender</label>
-			</li>
-		</ol>
-		<ol class="b-form b-form_switch">
-			<li>
-				<input type="radio" id="name3" name="radio1" />
-				<label class="b-label" for="name3">Name</label>	
-			</li>
-			<li>
-				<input type="radio" id="email3" name="radio1" />
-				<label class="b-label" for="email3">Email</label>	
-			</li>
-			<li>
-				<input type="radio" id="gender3" name="radio1" />	
-				<label class="b-label" for="gender3">Самый длинный вариант ответа в этом опроснике несомненно этот</label>
-			</li>
-		</ol>
-		<ol class="b-form b-form_switch b-form_switch_h">
-			<li>
-				<input type="radio" id="name4" name="radio2" />
-				<label class="b-label" for="name4">Name</label>	
-			</li>
-			<li>
-				<input type="radio" id="email4" name="radio2" />
-				<label class="b-label" for="email4">Email long email long</label>	
-			</li>
-			<li>
-				<input type="radio" id="gender4" name="radio2" />	
-				<label class="b-label" for="gender4">Gender</label>
-			</li>
-		</ol>
-	</li>
-	<li>
-		<input class="b-button" type="submit" value="Submit" /><button class="b-button" type="submit">Submit</button><a class="b-button" href="#">Submit</a>		
-	</li>
-</ol>
+	</div>
+	<div class="form__item">
+		<span class="error">Please enter your email</span>
+		<label class="label" for="text2">Email</label>
+		<input id="text2" type="text" class="text" />
+	</div>
 </div>
+<div class="form form_aligned form_right">
+	<div class="form__item">
+		<label class="label" for="text1">Name</label>
+		<input id="text1" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<span class="error">Please enter your email</span>
+		<label class="label" for="text2">Email</label>
+		<input id="text2" type="text" class="text" />
+		<span class="helper_text">Help text inline</span>
+		<p class="helper_text">Help text below</p>
+	</div>
+	<div class="form__item">
+		<label class="label" for="text3">Address very very veeerry looooooong label</label>
+		<input id="text3" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<label class="label" for="select">Select something</label>
+		<span class="select-wrap">
+			<select id="select" class="select">
+				<option value="value">value</option>
+				<option value="value">value</option>
+				<option value="value">value</option>
+				<option value="value">value</option>
+				<option value="value">value</option>	
+			</select>			
+		</span>
+	</div>
+	<div class="form__item">
+		<label class="label" for="select">Multicon-select</label>
+		<span class="select-wrap">
+			<select class="select" id="multiSelect" multiple="multiple">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</span>
+	</div>	
+	<div class="form__item">
+		<label class="label" for="text4">Message</label>
+		<textarea class="text text_area" cols="30" rows="10"></textarea>
+	</div>
+	<div class="form__item">
+		<div class="form form_switch">
+			<div class="form__item">
+				<input type="checkbox" id="name1" name="checkbox1" />
+				<label class="label" for="name1">Name</label>	
+			</div>
+			<div class="form__item">
+				<input type="checkbox" id="email1" name="checkbox1" />
+				<label class="label" for="email1">Email long long long long long looooong</label>	
+			</div>
+			<div class="form__item">
+				<input type="checkbox" id="gender1" name="checkbox1" />	
+				<label class="label" for="gender1">Gender long long long long long long long long long long long long long ong long long long long long long long long long long long long long long looooong</label>
+			</div>
+		</div>
+		<div class="form form_switch form_switch_inversed">
+			<div class="form__item">
+				<label class="label" for="name_45">Name</label>	
+				<input type="checkbox" id="name_45" name="checkbox1" />
+			</div>
+			<div class="form__item">
+				<label class="label" for="email_45">Email long long long long long looooong</label>	
+				<input type="checkbox" id="email_45" name="checkbox1" />
+			</div>
+			<div class="form__item">
+				<label class="label" for="gender_45">Please tick this checkbox if you agreed agreed agreed agreed agreed agreed agreed with <a href="#">Terms and Conditions</a></label>
+				<input type="checkbox" id="gender_45" name="checkbox1" />	
+			</div>
+		</div>
+		<div class="form form_switch form_switch_h">
+			<div class="form__item">
+				<input type="checkbox" id="name2" name="checkbox2" />
+				<label class="label" for="name2">Name</label>	
+			</div>
+			<div class="form__item">
+				<input type="checkbox" id="email2" name="checkbox2" />
+				<label class="label" for="email2">Email</label>	
+			</div>
+			<div class="form__item">
+				<input type="checkbox" id="gender2" name="checkbox2" />	
+				<label class="label" for="gender2">Gender</label>
+			</div>
+		</div>
+		<div class="form form_switch">
+			<div class="form__item">
+				<input type="radio" id="name3" name="radio1" />
+				<label class="label" for="name3">Name</label>	
+			</div>
+			<div class="form__item">
+				<input type="radio" id="email3" name="radio1" />
+				<label class="label" for="email3">Email</label>	
+			</div>
+			<div class="form__item">
+				<input type="radio" id="gender3" name="radio1" />	
+				<label class="label" for="gender3">Самый длинный вариант ответа в этом опроснике несомненно этот</label>
+			</div>
+		</div>
+		<div class="form form_switch form_switch_h">
+			<div class="form__item">
+				<input type="radio" id="name4" name="radio2" />
+				<label class="label" for="name4">Name</label>	
+			</div>
+			<div class="form__item">
+				<input type="radio" id="email4" name="radio2" />
+				<label class="label" for="email4">Email long email long</label>	
+			</div>
+			<div class="form__item">
+				<input type="radio" id="gender4" name="radio2" />	
+				<label class="label" for="gender4">Gender</label>
+			</div>
+		</div>
+	</div>
+	<div class="form__item">
+		<input class="button" type="submit" value="Submit" /><button class="button" type="submit">Submit</button><a class="button" href="#">Submit</a>		
+	</div>
+</div>
+
+<div class="form justify-row">
+	<div class="form__item">
+		<label class="label" for="text1">User</label>
+		<input id="text1" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<label class="label" for="text2">Password</label>
+		<input id="text2" type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<input class="button" type="submit" value="Submit" />
+	</div>
+</div>
+<div class="disabled-group justify-row">
+	<div class="form__item">
+		<label class="label" for="text1">User</label>
+		<input id="text1" disabled type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<label class="label" for="text2">Password</label>
+		<input id="text2" disabled type="text" class="text" />
+	</div>
+	<div class="form__item">
+		<input class="button" disabled type="submit" value="Submit" />
+	</div>		
+</div>
+</div>
+</div>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/flexie.min.js"></script>	
 </body>
 </html>
